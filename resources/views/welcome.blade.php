@@ -3,6 +3,7 @@
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
+        
 
         <title>Laravel</title>
 
@@ -126,19 +127,20 @@
                         Laravel v{{ Illuminate\Foundation\Application::VERSION }} (PHP v{{ PHP_VERSION }})
                     </div>
                     <div>
-                        <!-- <h2>Teste com rotas:</h2>
-                        <form action="/contato" method="post">
-                            {{ csrf_field() }}
-                            <input type="text" name="nome" placeholder="Indique Nome/Post">
-                            <button>Enviar</button>
+                        <h2>Teste com rotas:</h2>
+                        <form action="{{route('form.store')}}" method="post">
+                        <input type="hidden" name="_token"  />                         
+                            <input type="text" name="nome" placeholder="Nome/Post">
+                            @csrf 
+                            <button>Enviar<button>
                         </form>
-                        <form action="/contato" method="post">
-                            {{ csrf_field() }}
+                        <!-- <form action="/contato" method="post">
+                            {{csrf_field()}}
                             <input type="hidden" name="_method" value="put">
-                            <input type="text" name="nome" placeholder="Indique Nome/PUT">
-                            <button>Enviar</button>
+                            {{csrf_field()}}                          
+                            <input type="text" name="nome" placeholder="Nome/Put">
+                            <button>Enviar<button>
                         </form> -->
-            
                     </div>
                 </div>
             </div>

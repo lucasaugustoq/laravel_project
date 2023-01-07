@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\ContatoController;
 
 /*
 |--------------------------------------------------------------------------
@@ -18,22 +19,20 @@ Route::get('/', function () {
 });
 
 
-Route::get('/contato', function() {
-    return "Contato ";
-}); 
+Route::get('/contato', [ContatoController::class, 'index']);
 
-// Route::get('/contato/{id?}', function($id = null){
-//     return "contato id=$id";
-// });
+Route::get('/contato/bla', [ContatoController::class, 'bla']);
+
+
+// Route::post('/teste', function() {
+//     return "Contato POST ";
+// }); 
+
+Route::post('/teste', [ContatoController::class, 'store'])->name('form.store');
 
 // Route::post('/contato', function() {
-//     return "contato POST"
-// });
-
-// Route::put('/contato', function() {
-//     return "contato POST"
-// });
-
+//     return "Contato PUT ";
+// }); 
 
 Auth::routes();
 
