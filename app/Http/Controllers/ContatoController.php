@@ -9,17 +9,17 @@ class ContatoController extends Controller
 {
     public function index()
     {
-        // $contatos = [
-        //     (object)["nome"=>"Maria","tel"=>54455423132354],
-        //     (object)["nome"=>"Jose","tel"=>44454513554]
-        // ];
+        $contatos = [
+            (object)["nome"=>"BENJAMIN","tel"=>5,"nacionalidade"=>"marroquina"],
+            (object)["nome"=>"Jose","tel"=>44454513554,"nacionalidade"=>"brasileiro"]
+        ];
 
         // $contato = new App\Contato();
         // $con = $contato->lista();
         // dd($con->nome);
 
 
-        return view ('telacriada');
+        return view ('telacriada',compact('contatos'));
     }
 
     public function bla()
