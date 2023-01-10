@@ -1,5 +1,8 @@
-Mensaje de parabens
+@extends('template')
 
+@section('titulo','TELA CRIADA')
+
+@section('conteudo')
 
 @foreach($contatos as $contato)
     
@@ -9,5 +12,10 @@ Mensaje de parabens
 
 @endforeach
 
+Mensaje de parabens
 
-Mensaje de parabens de novo
+@endsection
+
+
+
+

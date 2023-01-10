@@ -10,8 +10,8 @@ class ContatoController extends Controller
     public function index()
     {
         $contatos = [
-            (object)["nome"=>"BENJAMIN","tel"=>5,"nacionalidade"=>"marroquina"],
-            (object)["nome"=>"Jose","tel"=>44454513554,"nacionalidade"=>"brasileiro"]
+            (object)["nome"=>"Maria","tel"=>4198545215,"nacionalidade"=>"marroquina"],
+            (object)["nome"=>"Jose","tel"=>44957513554,"nacionalidade"=>"brasileiro"]
         ];
 
         // $contato = new App\Contato();
