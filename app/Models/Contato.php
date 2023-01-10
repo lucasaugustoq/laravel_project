@@ -7,10 +7,10 @@ use Illuminate\Database\Eloquent\Model;
 
 class Contato extends Model
 {
-    public funcion lista()
+    public function lista()
     {
         return (object) [
-            'nome'=>'lucas',
+            'nome'=>'Bom dia',
             'tel'=>'354321545'
         ];
     }

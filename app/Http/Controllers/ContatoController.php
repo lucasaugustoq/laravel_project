@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Contato;
+use App\models\Contato;
 
 class ContatoController extends Controller
 {
@@ -14,9 +14,10 @@ class ContatoController extends Controller
             (object)["nome"=>"Jose","tel"=>44957513554,"nacionalidade"=>"brasileiro"]
         ];
 
-        // $contato = new App\Contato();
-        // $con = $contato->lista();
-        // dd($con->nome);
+        $contato = new Contato();
+        $con = $contato->lista();
+        dd($con->nome);
+        // dd($contato->lista());   Exemplo de como usar o dd
 
 
         return view ('telacriada',compact('contatos'));
