@@ -9,7 +9,7 @@ class CursoController extends Controller
 {
     public function index () 
     {
-        return "Esse é o index do curso controller";
+        return view('admin\cursos\index');
     }
         
 }
